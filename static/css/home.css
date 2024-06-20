@@ -38,6 +38,17 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
+/* home.css */
+
+.profile-image {
+    width: 150px; /* Adjust width as needed */
+    height: 150px; /* Adjust height as needed */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensure the image fills the circle */
+    border: 2px solid #fff; /* Optional: Add a border around the image */
+}
+
 @media (max-width: 768px) {
     nav ul {
         display: block;

@@ -12,29 +12,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="/myportfolio/static/css/home.css">
+    <title>Site</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
 </head>
 <body>
     <header>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact">Contato</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section id="home">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Hi, I'm [Your Name], a [Your Profession].</p>
-            <img src="{% static '/static/midia/IMG_4495.jpeg.jpg' %}" alt="Your Photo">
+            <h1>Bem-vindo(a)</h1>
+            <img src="{% static 'midia/IMG_4495.jpeg' %}" aalt="foto" class="profile-image">
         </section>
         <section id="about">
             <h2>About Me</h2>
-            <p>[A brief introduction about yourself]</p>
+            <p>Olá, me chamo João Kasprowicz, sou graduado em Biomedicina pela UNIVALI, com especializações em Ciência de Dados também pela UNIVALI, em Microbiologia pela UNIAMÉRICA, e em Metodologias Ativas de Aprendizagem, também pela UNIAMÉRICA.</p>
+            <p>Atualmente, estou cursando o mestrado no Programa de Mestrado em Saúde e Informática.</p>
+            <p>Tenho uma sólida experiência em análises clínicas, atuando em diversos setores do laboratório clínico, especialmente em amostras de urgência e emergência. Meu foco está na implementação de informática e tecnologia no setor médico, buscando soluções tecnológicas inovadoras.</p>
+            <p>Além da minha formação clínica, atuo como analista de qualidade, onde desenvolvo e implemento soluções tecnológicas no setor de qualidade. Minha abordagem combina conhecimento técnico em ciência de dados e microbiologia com práticas avançadas de aprendizado ativo, permitindo-me contribuir significativamente para o avanço da qualidade e eficiência no ambiente médico.</p>
         </section>
         <section id="projects">
             <h2>My Projects</h2>
@@ -52,7 +55,7 @@
     <footer>
         <p>&copy; 2024 [Your Name]. All Rights Reserved.</p>
     </footer>
-    <script src="/myportfolio/static/js/script.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
 

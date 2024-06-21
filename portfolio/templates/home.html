@@ -6,58 +6,144 @@
 
 
 {% block content %}
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'css/home.css' %}">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#projects">Projetos</a></li>
-                <li><a href="#contact">Contato</a></li>
-            </ul>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
-    </header>
-    <main>
-        <section id="home">
-            <h1>Bem-vindo(a)</h1>
-            <img src="{% static 'midia/IMG_4495.jpeg' %}" aalt="foto" class="profile-image">
+    
+        <!-- Header -->
+        <header class="bg-primary text-white text-center py-5">
+            <div class="container">
+                <h1 class="display-4">Welcome to My Portfolio</h1>
+                <p class="lead">Showcasing my work and skills as a Full Stack Developer</p>
+            </div>
+        </header>
+    
+        <!-- About Section -->
+        <section id="about" class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <img src="https://via.placeholder.com/500" alt="About Me" class="img-fluid rounded-circle">
+                    </div>
+                    <div class="col-lg-6">
+                        <h2>About Me</h2>
+                        <p>Hello! I'm a full stack developer with a passion for creating web applications that are both functional and visually appealing. I have experience in various web technologies and am always eager to learn and take on new challenges.</p>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Olá, me chamo João Kasprowicz, sou graduado em Biomedicina pela UNIVALI, com especializações em Ciência de Dados também pela UNIVALI, em Microbiologia pela UNIAMÉRICA, e em Metodologias Ativas de Aprendizagem, também pela UNIAMÉRICA.</p>
-            <p>Atualmente, estou cursando o mestrado no Programa de Mestrado em Saúde e Informática.</p>
-            <p>Tenho uma sólida experiência em análises clínicas, atuando em diversos setores do laboratório clínico, especialmente em amostras de urgência e emergência. Meu foco está na implementação de informática e tecnologia no setor médico, buscando soluções tecnológicas inovadoras.</p>
-            <p>Além da minha formação clínica, atuo como analista de qualidade, onde desenvolvo e implemento soluções tecnológicas no setor de qualidade. Minha abordagem combina conhecimento técnico em ciência de dados e microbiologia com práticas avançadas de aprendizado ativo, permitindo-me contribuir significativamente para o avanço da qualidade e eficiência no ambiente médico.</p>
+    
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="bg-light py-5">
+            <div class="container">
+                <h2 class="text-center">Portfolio</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="https://via.placeholder.com/350" class="card-img-top" alt="Project 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Project 1</h5>
+                                <p class="card-text">Description of project 1.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-primary">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="https://via.placeholder.com/350" class="card-img-top" alt="Project 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Project 2</h5>
+                                <p class="card-text">Description of project 2.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-primary">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="https://via.placeholder.com/350" class="card-img-top" alt="Project 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Project 3</h5>
+                                <p class="card-text">Description of project 3.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-primary">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section id="projects">
-            <h2>My Projects</h2>
-            <ul>
-                <li>Project 1: Description</li>
-                <li>Project 2: Description</li>
-                <li>Project 3: Description</li>
-            </ul>
+    
+        <!-- Contact Section -->
+        <section id="contact" class="py-5">
+            <div class="container">
+                <h2 class="text-center">Contact</h2>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>Email: [Your Email]</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 [Your Name]. All Rights Reserved.</p>
-    </footer>
-    <script src="{% static 'js/script.js' %}"></script>
-</body>
-</html>
-
+    
+        <!-- Footer -->
+        <footer class="bg-dark text-white text-center py-3">
+            <div class="container">
+                <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
+            </div>
+        </footer>
+    
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="scripts.js"></script>
+    </body>
+    </html>
+    
 
 {% endblock content %}

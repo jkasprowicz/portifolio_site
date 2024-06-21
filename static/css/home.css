@@ -1,69 +1,46 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
 }
+
 header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
-}
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-nav ul li {
-    display: inline;
-    margin: 0 1rem;
-}
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-main {
-    padding: 2rem;
-    text-align: center;
-}
-section {
-    margin: 2rem 0;
-}
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    background: linear-gradient(to right, #6a11cb, #8b8b8b);
+    color: white;
 }
 
-/* home.css */
-
-.profile-image {
-    width: 150px; /* Adjust width as needed */
-    height: 150px; /* Adjust height as needed */
-    border-radius: 50%; /* Makes the image circular */
-    object-fit: cover; /* Ensure the image fills the circle */
-    border: 2px solid #fff; /* Optional: Add a border around the image */
+header h1 {
+    animation: fadeInDown 1s;
 }
 
-@media (max-width: 768px) {
-    nav ul {
-        display: block;
-        text-align: center;
+header p {
+    animation: fadeInUp 1s;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
     }
-    nav ul li {
-        display: block;
-        margin: 0.5rem 0;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
-    main {
-        padding: 1rem;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
     }
-    img {
-        width: 100%;
-        height: auto;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
- }
- 
+}
+
+.card {
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}

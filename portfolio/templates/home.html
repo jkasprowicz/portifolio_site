@@ -8,142 +8,322 @@
 {% block content %}
     <!DOCTYPE html>
     <html lang="en">
+    
     <head>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfolio</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="{% static 'css/home.css' %}">
-    </head>
-    <body>
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">My Portfolio</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <title>Potfolio</title>
     
-        <!-- Header -->
-        <header class="bg-primary text-white text-center py-5">
-            <div class="container">
-                <h1 class="display-4">Welcome to My Portfolio</h1>
-                <p class="lead">Showcasing my work and skills as a Full Stack Developer</p>
-            </div>
+        <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    
+        <!-- box icons -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    
+    <body>
+    
+        <!-- header design -->
+        <header class="header">
+            <a href="#" class="logo">Portfolio.<span class="animate" style="--i:1;"></span></a>
+    
+            <div class="bx bx-menu" id="menu-icon"><span class="animate" style="--i:2;"></span></div>
+    
+            <nav class="navbar">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+    
+                <span class="active-nav"></span>
+                <span class="animate" style="--i:2;"></span>
+            </nav>
         </header>
     
-        <!-- About Section -->
-        <section id="about" class="py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 mb-4 mb-lg-0">
-                        <img src="https://via.placeholder.com/500" alt="About Me" class="img-fluid rounded-circle">
+        <!-- home section design -->
+        <section class="home show-animate" id="home">
+            <div class="home-content">
+                <h1>Olá, Sou <span>João Kasprowicz</span><span class="animate" style="--i:2;"></span></h1>
+                <div class="text-animate">
+                    <h3>Health Applications</h3>
+                    <span class="animate" style="--i:3;"></span>
+                </div>
+                <p>Sou um profissional dedicado, autoconfiante e ávido por aprendizado, sempre buscando oportunidades para adquirir novas habilidades.
+                    Possuo Graduação em Biomedicina, com habilitação em Patologia Clínica (Análises Clínicas).
+                    Com especialização em Microbiologia e experiência em Metodologias Ativas de Aprendizagem, estou finalizando meu CST em Ciência de Dados e iniciando um mestrado em Informática em Saúde, focado na aplicação de modelos de machine learning em visão computacional. 
+                    Acredito que meu conhecimento e experiência possam contribuir significativamente para uma organização profissional, com devoção, diligência e compromisso.
+                    <span class="animate" style="--i:4;"></span>
+                </p>
+    
+                <div class="btn-box">
+                    <a href="#" class="btn">Lattes</a>
+                    <a href="#" class="btn">Let's Talk</a>
+                    <span class="animate" style="--i:5;"></span>
+                </div>
+            </div>
+    
+            <div class="home-sci">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-github'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <span class="animate" style="--i:6;"></span>
+            </div>
+    
+            <div class="home-imgHover"></div>
+            <span class="animate home-img" style="--i:7;"></span>
+        </section>
+    
+        <!-- about section design -->
+        <section class="about" id="about">
+            <h2 class="heading">About <span>Me</span><span class="animate scroll" style="--i:1;"></span></h2>
+    
+            <div class="about-img">
+                <img src="/static/midia/IMG_4495.jpeg" alt="">
+                <span class="circle-spin"></span>
+                <span class="animate scroll" style="--i:2;"></span>
+            </div>
+    
+            <div class="about-content">
+                <h3>Hi there! Glad to see you here.<span class="animate scroll" style="--i:3;"></span></h3>
+                <p>Hello! Nishat Mahmud here. A technology fanatic!<br>
+                    Currently, I am enrolled in the Department of
+                    Computer Science and Engineering at Jagannath
+                    University in Dhaka. My early education was
+                    completed from Mymensingh Zilla School and Govt.
+                    Ananda Mohon College in Mymensingh.
+                    <span class="animate scroll" style="--i:4;"></span>
+                </p>
+    
+                <div class="btn-box btns">
+                    <a href="#contact" class="btn">Contact Me</a>
+                    <span class="animate scroll" style="--i:5;"></span>
+                </div>
+            </div>
+        </section>
+    
+        <!-- education section design -->
+        <section class="education" id="education">
+            <h2 class="heading">My <span>Journey</span><span class="animate scroll" style="--i:1;"></span></h2>
+    
+            <div class="education-row">
+                <div class="education-column">
+                    <h3 class="title">Education<span class="animate scroll" style="--i:2;"></span></h3>
+    
+                    <div class="education-box">
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year"><i class='bx bxs-calendar'></i> 2017 - 2018</div>
+                                <h3>Master Degree - University</h3>
+                                <p>Lorem ipsum dolor, sit amet consectetur
+                                    adipisicing elit. Blanditiis dolorem harum
+                                    dolorum debitis. Magni, iste! Perferendis
+                                    laborum reprehenderit dolorum totam.</p>
+                            </div>
+                        </div>
+    
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year"><i class='bx bxs-calendar'></i> 2018 - 2019</div>
+                                <h3>Master Degree - University</h3>
+                                <p>Lorem ipsum dolor, sit amet consectetur
+                                    adipisicing elit. Blanditiis dolorem harum
+                                    dolorum debitis. Magni, iste! Perferendis
+                                    laborum reprehenderit dolorum totam.</p>
+                            </div>
+                        </div>
+    
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year"><i class='bx bxs-calendar'></i> 2019 - 2020</div>
+                                <h3>Master Degree - University</h3>
+                                <p>Lorem ipsum dolor, sit amet consectetur
+                                    adipisicing elit. Blanditiis dolorem harum
+                                    dolorum debitis. Magni, iste! Perferendis
+                                    laborum reprehenderit dolorum totam.</p>
+                            </div>
+                        </div>
+    
+                        <span class="animate scroll" style="--i:3;"></span>
                     </div>
-                    <div class="col-lg-6">
-                        <h2>About Me</h2>
-                        <p>Hello! I'm a full stack developer with a passion for creating web applications that are both functional and visually appealing. I have experience in various web technologies and am always eager to learn and take on new challenges.</p>
+                </div>
+    
+                <div class="education-column">
+                    <h3 class="title">Experience<span class="animate scroll" style="--i:5;"></span></h3>
+    
+                    <div class="education-box">
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year"><i class='bx bxs-calendar'></i> 2017 - 2018</div>
+                                <h3>Web Developer - Company</h3>
+                                <p>Lorem ipsum dolor, sit amet consectetur
+                                    adipisicing elit. Blanditiis dolorem harum
+                                    dolorum debitis. Magni, iste! Perferendis
+                                    laborum reprehenderit dolorum totam.</p>
+                            </div>
+                        </div>
+    
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year"><i class='bx bxs-calendar'></i> 2018 - 2019</div>
+                                <h3>Web Developer - Company</h3>
+                                <p>Lorem ipsum dolor, sit amet consectetur
+                                    adipisicing elit. Blanditiis dolorem harum
+                                    dolorum debitis. Magni, iste! Perferendis
+                                    laborum reprehenderit dolorum totam.</p>
+                            </div>
+                        </div>
+    
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year"><i class='bx bxs-calendar'></i> 2019 - 2020</div>
+                                <h3>Web Developer - Company</h3>
+                                <p>Lorem ipsum dolor, sit amet consectetur
+                                    adipisicing elit. Blanditiis dolorem harum
+                                    dolorum debitis. Magni, iste! Perferendis
+                                    laborum reprehenderit dolorum totam.</p>
+                            </div>
+                        </div>
+    
+                        <span class="animate scroll" style="--i:6;"></span>
                     </div>
                 </div>
             </div>
         </section>
     
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="bg-light py-5">
-            <div class="container">
-                <h2 class="text-center">Portfolio</h2>
-                <div class="row">
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <img src="https://via.placeholder.com/350" class="card-img-top" alt="Project 1">
-                            <div class="card-body">
-                                <h5 class="card-title">Project 1</h5>
-                                <p class="card-text">Description of project 1.</p>
+        <!-- skills section design -->
+        <section class="skills" id="skills">
+            <h2 class="heading">My <span>Skills</span><span class="animate scroll" style="--i:1;"></span></h2>
+    
+            <div class="skills-row">
+                <div class="skills-column">
+                    <h3 class="title">Coding Skills<span class="animate scroll" style="--i:2;"></span></h3>
+    
+                    <div class="skills-box">
+                        <div class="skills-content">
+                            <div class="progress">
+                                <h3>HTML <span>90%</span></h3>
+                                <div class="bar"><span></span></div>
                             </div>
-                            <div class="card-footer">
-                                <a href="#" class="btn btn-primary">View Project</a>
+    
+                            <div class="progress">
+                                <h3>CSS <span>80%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+    
+                            <div class="progress">
+                                <h3>JavaScript <span>65%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+    
+                            <div class="progress">
+                                <h3>Python <span>75%</span></h3>
+                                <div class="bar"><span></span></div>
                             </div>
                         </div>
+    
+                        <span class="animate scroll" style="--i:3;"></span>
                     </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <img src="https://via.placeholder.com/350" class="card-img-top" alt="Project 2">
-                            <div class="card-body">
-                                <h5 class="card-title">Project 2</h5>
-                                <p class="card-text">Description of project 2.</p>
+                </div>
+    
+                <div class="skills-column">
+                    <h3 class="title">Professional Skills<span class="animate scroll" style="--i:5;"></span></h3>
+    
+                    <div class="skills-box">
+                        <div class="skills-content">
+                            <div class="progress">
+                                <h3>Web Design <span>95%</span></h3>
+                                <div class="bar"><span></span></div>
                             </div>
-                            <div class="card-footer">
-                                <a href="#" class="btn btn-primary">View Project</a>
+    
+                            <div class="progress">
+                                <h3>Web Development <span>67%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+    
+                            <div class="progress">
+                                <h3>Graphic Design <span>85%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+    
+                            <div class="progress">
+                                <h3>SEO Marketing <span>60%</span></h3>
+                                <div class="bar"><span></span></div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <img src="https://via.placeholder.com/350" class="card-img-top" alt="Project 3">
-                            <div class="card-body">
-                                <h5 class="card-title">Project 3</h5>
-                                <p class="card-text">Description of project 3.</p>
-                            </div>
-                            <div class="card-footer">
-                                <a href="#" class="btn btn-primary">View Project</a>
-                            </div>
-                        </div>
+    
+                        <span class="animate scroll" style="--i:6;"></span>
                     </div>
                 </div>
             </div>
         </section>
     
-        <!-- Contact Section -->
-        <section id="contact" class="py-5">
-            <div class="container">
-                <h2 class="text-center">Contact</h2>
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <form>
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" class="form-control" id="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" class="form-control" id="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea class="form-control" id="message" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
-                        </form>
+        <!-- contact section design -->
+        <section class="contact" id="contact">
+            <h2 class="heading">Contact <span>Me</span><span class="animate scroll" style="--i:1;"></span></h2>
+    
+            <form action="#">
+                <div class="input-box">
+                    <div class="input-field">
+                        <input type="text" placeholder="Full Name" required>
+                        <span class="focus"></span>
                     </div>
+                    <div class="input-field">
+                        <input type="text" placeholder="Email" required>
+                        <span class="focus"></span>
+                    </div>
+    
+                    <span class="animate scroll" style="--i:3;"></span>
                 </div>
-            </div>
+                <div class="input-box">
+                    <div class="input-field">
+                        <input type="number" placeholder="Mobile Number" required>
+                        <span class="focus"></span>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" placeholder="Email Subject" required>
+                        <span class="focus"></span>
+                    </div>
+    
+                    <span class="animate scroll" style="--i:5;"></span>
+                </div>
+    
+                <div class="textarea-field">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                    <span class="focus"></span>
+    
+                    <span class="animate scroll" style="--i:7;"></span>
+                </div>
+    
+                <div class="btn-box btns">
+                    <button type="submit" class="btn">Submit</button>
+    
+                    <span class="animate scroll" style="--i:9;"></span>
+                </div>
+            </form>
         </section>
     
-        <!-- Footer -->
-        <footer class="bg-dark text-white text-center py-3">
-            <div class="container">
-                <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
+        <!-- footer design -->
+        <footer class="footer">
+            <div class="footer-text">
+                <p>Copyright &copy; 2023 | Designed and
+                    Maintenance by Nishat Mahmud | All
+                    Rights Reserved</p>
+    
+                <span class="animate scroll" style="--i:1;"></span>
+            </div>
+    
+            <div class="footer-iconTop">
+                <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+    
+                <span class="animate scroll" style="--i:3;"></span>
             </div>
         </footer>
     
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="scripts.js"></script>
-    </body>
-    </html>
     
+        <script src="{% static 'script.js' %}"></script>
+    </body>
+    
+    </html>
 
 {% endblock content %}
